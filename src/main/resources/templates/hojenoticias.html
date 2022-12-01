@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
+ + xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+ 
+	<head>
+		<title>&quaternions;oje &Nopf;otícias</title>
+		<link rel="icon" type="image/jpg" style="width: 100%;" href="/images/news.jpg"/>
+	</head>
+	
+	<body>
+	
+		<h2>&quaternions;oje &Nopf;otícias, seu boletim diário de notícias</h2>
+		<h3 th:inline="text">Olá [[${#httpServletRequest.remoteUser}]]!</h3>
+			<form th:action="@{/logout}" method="post">
+				<input type="submit" value="Sair"/>
+			</form>
+			
+	</body> 
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
+ + xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+ 
+	<head>
+		<title>Login de usuário</title>
+		<link rel="icon" type="image/jpg" style="width: 100%;" href="/images/news.jpg"/>
+	</head>
+ 
+ 	<body>
+ 		<h2>Realize o login para acessar a página de notícias exclusiva para assinantes</h2>
+ 		
+ 		<div th:if="${param.error}">
+ 			Senha e/ou usuário inválido.
+ 		</div>
+ 		<div th:if="${param.logout}">
+ 			Usuário desconectado.
+ 		</div><br>
+ 		<form th:action="@{/login}" method="post">
+ 			<div><label>Nome do usuário: <input type="text" name="username"/> </label></div>
+ 			<div><label>Senha: <input type="password" name="password"/> </label></div>
+ 		
+			<div><input type="submit" value="Entrar"/></div> 		
+ 		</form>
+ 		
+ 		<div>
+ 			<p>Voltar para a página inicial clique <a th:href="@{/home}">aqui</a></p>
+ 		</div>
+ 	</body>
+ 	
+</html>
