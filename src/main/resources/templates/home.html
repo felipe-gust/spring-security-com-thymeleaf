@@ -19,6 +19,10 @@
 		
 		.principal{margin-left:2%; margin-right:2%}
 		
+		.paginahoje a{text-decoration:none; text-align:right; font-style:italic; font-weight:bold;}
+		
+		.assinantes a{text-align:left; text-decoration:none;}
+		
 	</style>
 
 		
@@ -30,11 +34,12 @@
 		
 		<div class="principal">
 		
-			<p style="text-align: left;"><a th:href="@{/hojenoticias}">Acessar a página para assinantes</a></p>
+			<h5 class="assinantes"><a th:href="@{/hojenoticias}">Acessar a página para assinantes</a></h5>
 			
 			<div style="text-align: center;">		
 				<h4>O que é Lorem Ipsum?</h4>
 				<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.</p>
+				<div class="paginahoje"><i>Veja a notícia completa <a th:href="@{/hojenoticias}">aqui</a></div>
 				<img src="../static/images/copa-mundo.jpg" width="700" th:src="@{/images/copa-mundo.jpg}"><br><br>
 			</div><br><br>
 			
@@ -44,19 +49,23 @@
 					<img src="../static/images/copa-mundo.jpg" width="200" th:src="@{/images/agricultura.jpg}">
 					<h4>Porque nós o usamos?</h4>
 					<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.</p>
+					<div class="paginahoje">Veja a notícia completa <a th:href="@{/hojenoticias}">aqui</a></div>
 			    </div>
 			    <div class="col">
 					<img src="../static/images/copa-mundo.jpg" width="200" th:src="@{/images/ativfisica.jpg}">
 					<h4>Porque nós o usamos?</h4>
 					<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.</p>
+					<div class="paginahoje">Veja a notícia completa <a th:href="@{/hojenoticias}">aqui</a></div>
 			    </div>
 			    <div class="col">
 					<img src="../static/images/copa-mundo.jpg" width="200" th:src="@{/images/eleicoes.jpg}">
 					<h4>Porque nós o usamos?</h4>
 					<p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.</p>
+					<div class="paginahoje">Veja a notícia completa <a th:href="@{/hojenoticias}">aqui</a></div>
 			    </div>
-			  </div><!-- fom row -->
+			  </div><!-- fim row -->
 			</div><!-- fim div container -->
+			<br>
 		
 		</div><!-- fim classe principal -->
 		

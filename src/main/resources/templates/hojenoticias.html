@@ -2,18 +2,119 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" 
  + xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
  
+ 
+<!--uso do Bootstrap na página-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+	
 	<head>
 		<title>&quaternions;oje &Nopf;otícias</title>
 		<link rel="icon" type="image/jpg" style="width: 100%;" href="/images/news.jpg"/>
 	</head>
-	
-	<body>
-	
-		<h2>&quaternions;oje &Nopf;otícias, seu boletim diário de notícias</h2>
-		<h3 th:inline="text">Olá [[${#httpServletRequest.remoteUser}]]!</h3>
+
+	<body style="overflow:scroll;">
+
+	<style text="css">
+		
+		.login a{text-decoration:none; color:black;}
+		
+		.principal{margin-left:2%; margin-right:2%}
+		
+		.noticias{margin-left:20%; margin-right:20%}
+		
+		.imgNoticias{text-align: center;}
+		
+	</style>
+
+		<h1 style="text-align:center;">&quaternions;oje &Nopf;otícias</h1>
+		<h6 style="text-align: center;">Seu jornal desde 1995</h6>
+		<div style="text-align:right; margin-right:2%">
+			<h4 th:inline="text">Olá [[${#httpServletRequest.remoteUser}]]!</h4>
 			<form th:action="@{/logout}" method="post">
-				<input type="submit" value="Sair"/>
+				<input class="btn btn-primary" type="submit" value="Sair"/>
 			</form>
+		</div>
+		<hr>
+		
+		<div class="principal">
+			
+			<h3 style="text-align: center;">&quaternions;oje &Nopf;otícias, seu boletim diário de notícias</h3>
+			<br><br>
+			
+			<div class="noticias">
+				<div class="imgNoticias">
+					<h4>Lorem Ipsum - Porque nós o usamos?</h4>
+					<img src="../static/images/copa-mundo.jpg" width="500" th:src="@{/images/agricultura.jpg}">
+				</div><br>
+				<div>				
+					<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando 
+					estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", 
+					fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, 
+					e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, 
+					eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).<br>
+					Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. 
+					Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre 
+					citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, 
+					escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.
+					O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas 
+					abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.</p>
+				</div><!-- fim noticias 1 -->
+				<hr>
+				<div class="imgNoticias">
+					<h4>Lorem Ipsum - Porque nós o usamos?</h4>
+					<img src="../static/images/copa-mundo.jpg" width="500" th:src="@{/images/ativfisica.jpg}">
+				</div><br>
+				<div>				
+					<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando 
+					estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", 
+					fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, 
+					e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, 
+					eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).<br>
+					Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. 
+					Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre 
+					citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, 
+					escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.
+					O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas 
+					abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.</p>
+				</div><!-- fim noticias 2 -->
+				<hr>
+				<div class="imgNoticias">
+					<h4>Lorem Ipsum - Porque nós o usamos?</h4>
+					<img src="../static/images/copa-mundo.jpg" width="500" th:src="@{/images/eleicoes.jpg}">
+				</div><br>
+				<div>				
+					<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando 
+					estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", 
+					fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, 
+					e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, 
+					eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).<br>
+					Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. 
+					Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre 
+					citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, 
+					escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.
+					O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas 
+					abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.</p>
+				</div><!-- fim noticias 3 -->
+				<hr>
+				<div class="imgNoticias">
+					<h4>Lorem Ipsum - Porque nós o usamos?</h4>
+					<img src="../static/images/copa-mundo.jpg" width="500" th:src="@{/images/copa-mundo.jpg}">
+				</div><br>
+				<div>				
+					<p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando 
+					estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo aqui", 
+					fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, 
+					e uma rápida busca por 'lorem ipsum' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, 
+					eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).<br>
+					Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. 
+					Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre 
+					citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, 
+					escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.
+					O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas 
+					abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.</p>
+				</div><!-- fim noticias 4 -->
+				
+			  </div><!-- fim classe noticias -->
 			
 	</body> 
 </html>
